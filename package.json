@@ -1,0 +1,14 @@
+{
+  "name": "examenApp",
+  "version": "0.0.1",
+  "description": "App para TipoExpDtos con AngularJS",
+  "main": "App.js",
+  "author": "UCSA",
+  "dependencies": {
+    "express": "latest",
+    "method-override": "*",
+    "morgan": "*",
+    "satellizer": "*",
+    "nconf": "*"
+  }
+}

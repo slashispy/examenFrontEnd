@@ -1,0 +1,22 @@
+<table class="table">
+    <tr>
+        <td>
+            <h3>Lista de Expedientes por Departamentos</h3>
+        </td>
+        <td></td>
+    </tr>
+    <tr ng-repeat="tipoExpedDtos in listaTiposExpedDtos">
+        <td>{{tipoExpedDtos.tipoExped.descripcion}}</td>
+        <td>{{tipoExpedDtos.departamento.descripcion}}</td>
+        <td ng-if="tipoExpedDtos.sentido === 'P'">Positivo</td>
+        <td ng-if="tipoExpedDtos.sentido === 'N'">Negativo</td>
+        <td>{{tipoExpedDtos.orden}}</td>
+        <td ng-if="tipoExpedDtos.estado === 'A'">Activo</td>
+        <td ng-if="tipoExpedDtos.estado === 'I'">Inactivo</td>
+        <td>
+            <a class="btn btn-default" 
+                ui-sref="tipoExpedDtos-view({id:tipoExpedDtos.id})">Ver</a>
+        </td>
+    </tr>
+</table>
+<a ui-sref="tipoExpedDtos-new" class="btn-primary btn-lg">Agregar Nuevo Expedientes de un Departamento</a>

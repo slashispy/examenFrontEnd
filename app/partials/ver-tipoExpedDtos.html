@@ -1,0 +1,31 @@
+<table class="table">
+    <tr>
+        <td><h3>Detalle del Expediente:  {{tipoExpedDtos.id}}</h3></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Departamento</td>
+        <td>{{tipoExpedDtos.departamento.descripcion}}</td>
+    </tr>
+    <tr>
+        <td>Tipo de Expediente</td>
+        <td>{{tipoExpedDtos.tipoExped.descripcion}}</td>
+    </tr>
+    <tr>
+        <td>Sentido</td>
+        <td ng-if="tipoExpedDtos.sentido === 'P'">Positivo</td>
+        <td ng-if="tipoExpedDtos.sentido === 'N'">Negativo</td>
+    </tr>
+    <tr>
+        <td>Orden</td>
+        <td>{{tipoExpedDtos.orden}}</td>
+    </tr>
+    <tr>
+        <td>Estado</td>
+        <td ng-if="tipoExpedDtos.estado === 'A'">Activo</td>
+        <td ng-if="tipoExpedDtos.estado === 'I'">Inactivo</td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-primary" ui-sref="tipoExpedDtos-edit({id:tipoExpedDtos.id})">Cambiar Estado</a>
+</div>
